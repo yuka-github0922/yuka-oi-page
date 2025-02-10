@@ -10,7 +10,7 @@ export class TaskService {
     return this.tasks;
   }
 
-  createTask(createTaskInput:CreateTaskInput): Task {
+  createTask(createTaskInput: CreateTaskInput): Task {
     const { name, dueDate, description } = createTaskInput;
     const newTask = new Task();
     newTask.id = this.tasks.length + 1;
@@ -20,8 +20,6 @@ export class TaskService {
     newTask.description = description;
 
     this.tasks.push(newTask);
-  
     return newTask;
-
   }
 }

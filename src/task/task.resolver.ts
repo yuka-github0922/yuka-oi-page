@@ -13,9 +13,7 @@ export class TaskResolver {
   }
 
   @Mutation(() => Task)
-  createTask(
-    @Args('createTaskInput') createTaskInput: CreateTaskInput
-  ): Task {
+  createTask(@Args('createTaskInput') createTaskInput: CreateTaskInput): Task {
     return this.taskService.createTask(createTaskInput);
   }
 }
